@@ -1,4 +1,6 @@
 import Navbar from "react-bootstrap/Navbar";
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from "react-bootstrap/DropdownButton";
 import "../App.css";
 
 const navbar = () => {
@@ -15,10 +17,17 @@ const navbar = () => {
             class="center-block"
           />
         </div>
+        <div>
+          <DropdownButton id="dropdown-item-button" title="Choose Season">
+            <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText>
+            <Dropdown.Item as="button">Action</Dropdown.Item>
+            <Dropdown.Item as="button">Another action</Dropdown.Item>
+            <Dropdown.Item as="button">Something else</Dropdown.Item>
+          </DropdownButton>
+        </div>
       </div>
     </Navbar>
   );
 };
 
 export default navbar;
-

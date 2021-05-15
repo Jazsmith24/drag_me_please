@@ -49,3 +49,4 @@ const Queens = () => {
 };
 
 export default Queens;
+  
