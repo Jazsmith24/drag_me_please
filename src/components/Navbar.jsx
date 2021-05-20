@@ -1,7 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import "../App.css";
+import "../App.scss";
 import React from 'react';
 // import { If, Then, Else, When, Unless, Switch, Case, Default } from 'react-if';
 // import seasons from "../fake-data.js";

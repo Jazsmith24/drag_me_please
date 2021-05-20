@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Nav from "./components/Navbar";
 import Queens from "./components/Queens";
 import seasonQueens from "./fake-data";
