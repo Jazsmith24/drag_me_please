@@ -6,7 +6,17 @@ const Queens = ({ queens }) => {
   if (queens.length > 0) {
     return (
       <div>
-        {queens.map((queen) => {
+        {queens.sort((a,b) => { // sorted the queens in order by finishing place
+          let queen1;
+          let queen2;
+          for (let i=0; i<a.seasons.length;i++){
+            queen1 = a.seasons[i].place;
+            for (let j=0; j<b.seasons.length;j++){
+              queen2 = b.seasons[j].place
+            }
+          }
+          return queen1 - queen2;
+         }).map((queen) => {
           return (
             <div className="flip-card" key={queen.id}>
               <div className="flip-card-inner">
