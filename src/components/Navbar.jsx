@@ -20,7 +20,7 @@ const Nav = ({ handleThemClicks }) => {
           />
         </div>
         <div>
-          <DropdownButton id="dropdown-item-button" title="Choose Season">
+          <DropdownButton id="dropdown-item-button" title="View Queens">
             <Dropdown.Item as="button" onClick={() => {handleThemClicks(1)}}>Season 1</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => {handleThemClicks(2)}}>Season 2</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => {handleThemClicks(3)}}>Season 3</Dropdown.Item>

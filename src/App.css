@@ -1,6 +1,9 @@
 .App {
   text-align: center;
+  background-color: #f3c5e5;
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -21,7 +24,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 88, 219);
+}
+
+.App.div {
+  color: #fcaee4;
 }
 
 .App-link {
@@ -43,7 +50,7 @@
 
 #dropdown-item-button {
   background-color: #f80eb2;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .brand {
@@ -59,9 +66,10 @@
   perspective: 1000px;
   justify-content: space-between;
   position: relative;
-  border: 3px solid rgb(255, 255, 255);
+  border: #f8b3e3;
   display: inline;
   float: left;
+  background-image: url("https://image.freepik.com/free-vector/abstract-violet-liquid-watercolor-background-with-golden-stains-lines_353323-189.jpg");
 
 }
 

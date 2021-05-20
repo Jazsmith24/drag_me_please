@@ -4,7 +4,7 @@ import Queens from "./components/Queens";
 import Season from "./components/Episodes";
 import seasonQueens from "./fake-data";
 import axios from "axios";
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class App extends React.Component {
       // season: season,
       currentSeason: 0,
       queens: seasonQueens,
-      selected: []
+      selected: [],
     };
 
     this.chooseSeason = this.chooseSeason.bind(this);
@@ -24,20 +24,19 @@ class App extends React.Component {
 
   handleThemClicks(selected) {
     this.setState({
-      queens: this.chooseSeason(selected)
+      queens: this.chooseSeason(selected),
     });
   }
 
-  
   async componentDidMount() {
-    // this.chooseSeason(1);
-    await axios.get(`http://www1.nokeynoshade.party/api/seasons/1/queens`)
+    await axios
+      .get(`http://www1.nokeynoshade.party/api/seasons/1/queens`)
       .then((queens) => {
         // debugger;
         console.log(queens.data);
         this.setState({ queens: queens.data });
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }
 
   async chooseSeason(seasonNum) {
@@ -59,11 +58,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <Nav season={season} handleThemClicks={this.handleThemClicks}/>
+          <Nav season={season} handleThemClicks={this.handleThemClicks} />
         </header>
-        <div>
-          <Queens queens={queens}/>
-        </div>
+          <div className="body">
+            <Queens queens={queens} />
+          </div>
       </div>
     );
   }

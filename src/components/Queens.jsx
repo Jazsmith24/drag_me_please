@@ -2,16 +2,15 @@ import React from "react";
 import "../App.css";
 
 const Queens = ({ queens }) => {
-  console.log(queens.queens);
 
   if (queens.length > 0) {
     return (
       <div>
         {queens.map((queen) => {
           return (
-            <div class="flip-card" key={queen.id}>
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
+            <div className="flip-card" key={queen.id}>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
                   <img
                     src={queen.image_url}
                     alt="Avatar"
@@ -19,10 +18,10 @@ const Queens = ({ queens }) => {
                     height="300px"
                   ></img>
                 </div>
-                <div class="flip-card-back">
+                <div className="flip-card-back" key={queen.id}>
                   <h1>{queen.name}</h1>
-                  <p>Queen!</p>
-                  <p>We love that guy</p>
+                  <p if={queen.quote}>{queen.quote}</p>
+                  {queen.seasons.map(season => {return <p key={queen.id}>Place: {season.place}</p>})}
                 </div>
               </div>
             </div>
