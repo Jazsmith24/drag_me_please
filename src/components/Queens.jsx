@@ -1,58 +1,5 @@
-import CardGroup from "react-bootstrap/CardGroup";
-import Card from "react-bootstrap/Card";
 import React from "react";
-
-// const Queens = (queens) => {
-
-//   return (
-
-//   <div className="queens">
-//     <CardGroup>
-//         <Card>
-//           <Card.Img variant="top" src="http://www.nokeynoshade.party/images/rebecca-glasscock.jpg" />
-//           <Card.Body>
-//             <Card.Title>Card title</Card.Title>
-//             <Card.Text>
-//               This is a wider card with supporting text below as a natural
-//               lead-in to additional content. This content is a little bit
-//               longer.
-//             </Card.Text>
-//           </Card.Body>
-//           <Card.Footer>
-//             <small className="text-muted">Last updated 3 mins ago</small>
-//           </Card.Footer>
-//         </Card>
-//         <Card>
-//           <Card.Img variant="top" src="holder.js/100px160" />
-//           <Card.Body>
-//             <Card.Title>Card title</Card.Title>
-//             <Card.Text>
-//               This card has supporting text below as a natural lead-in to
-//               additional content.{" "}
-//             </Card.Text>
-//           </Card.Body>
-//           <Card.Footer>
-//             <small className="text-muted">Last updated 3 mins ago</small>
-//           </Card.Footer>
-//         </Card>
-//         <Card>
-//           <Card.Img variant="top" src="holder.js/100px160" />
-//           <Card.Body>
-//             <Card.Title>Card title</Card.Title>
-//             <Card.Text>
-//               This is a wider card with supporting text below as a natural
-//               lead-in to additional content. This card has even longer content
-//               than the first to show that equal height action.
-//             </Card.Text>
-//           </Card.Body>
-//           <Card.Footer>
-//             <small className="text-muted">Last updated 3 mins ago</small>
-//           </Card.Footer>
-//         </Card>
-//       </CardGroup>
-//   </div>
-//   )
-// };
+import "../App.css";
 
 const Queens = ({ queens }) => {
   console.log(queens.queens);
@@ -62,25 +9,22 @@ const Queens = ({ queens }) => {
       <div>
         {queens.map((queen) => {
           return (
-            <div className="queens" key={queen.id}>
-              <CardGroup>
-                <Card>
-                  <Card.Img variant="top" src={queen.image_url} />
-                  <Card.Body>
-                    <Card.Title>{queen.name}</Card.Title>
-                    <Card.Text>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </Card.Text>
-                  </Card.Body>
-                  <Card.Footer>
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </Card.Footer>
-                </Card>
-              </CardGroup>
+            <div class="flip-card" key={queen.id}>
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src={queen.image_url}
+                    alt="Avatar"
+                    width="300px"
+                    height="300px"
+                  ></img>
+                </div>
+                <div class="flip-card-back">
+                  <h1>{queen.name}</h1>
+                  <p>Queen!</p>
+                  <p>We love that guy</p>
+                </div>
+              </div>
             </div>
           );
         })}

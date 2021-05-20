@@ -39,38 +39,4 @@ const Nav = ({ handleThemClicks }) => {
   );
 };
 
-// const Nav = (seasons) => {
-//   console.log(seasons);
-//   return (
-//     <Navbar class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-//       <div class="container-fluid" href="#home">
-//         <div>
-//           <img
-//             className="brand"
-//             width="250"
-//             height="40"
-//             src="/DragMePlease_logo.png"
-//             alt="centered"
-//             class="center-block"
-//           />
-//         </div>
-//         <If condition={seasons}>
-//           <div>
-//             {seasons.map((season) => {
-//               <div className="season-data">
-//                 <DropdownButton id="dropdown-item-button" title="Choose Season">
-//                   {/* <Dropdown.ItemText></Dropdown.ItemText> */}
-//                   <Dropdown.Item as="button">
-//                     Season {season.seasonNumber}
-//                   </Dropdown.Item>
-//                 </DropdownButton>
-//               </div>;
-//             })}
-//           </div>
-//         </If>
-//       </div>
-//     </Navbar>
-//   );
-// };
-
 export default Nav;

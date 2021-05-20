@@ -3,7 +3,6 @@ import Nav from "./components/Navbar";
 import Queens from "./components/Queens";
 import Season from "./components/Episodes";
 import seasonQueens from "./fake-data";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import React, { Component } from 'react';
 
@@ -28,10 +27,6 @@ class App extends React.Component {
       queens: this.chooseSeason(selected)
     });
   }
-
-  // componentDidMount() {
-  //       return this.setState({ season: season });
-  // }
 
   
   async componentDidMount() {
