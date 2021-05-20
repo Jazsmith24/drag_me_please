@@ -1,7 +1,6 @@
 import "./App.css";
 import Nav from "./components/Navbar";
 import Queens from "./components/Queens";
-import Season from "./components/Episodes";
 import seasonQueens from "./fake-data";
 import axios from "axios";
 import React, { Component } from "react";
