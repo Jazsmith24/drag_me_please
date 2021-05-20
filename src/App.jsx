@@ -15,18 +15,19 @@ class App extends React.Component {
       // season: season,
       currentSeason: 0,
       queens: seasonQueens,
+      selected: []
     };
 
-    // this.chooseSeason = this.chooseSeason.bind(this);
+    this.chooseSeason = this.chooseSeason.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.handleThemClicks = this.handleThemClicks.bind(this);
   }
 
-  //clickhandler function here
-  // handleThemClicks(selected) {
-  //   this.setState({
-
-  //   });
-  // }
+  handleThemClicks(selected) {
+    this.setState({
+      queens: this.chooseSeason(selected)
+    });
+  }
 
   // componentDidMount() {
   //       return this.setState({ season: season });
@@ -44,18 +45,18 @@ class App extends React.Component {
       .catch(err => console.error(err));
   }
 
-  // async chooseSeason(seasonNum) {
-  //   let queens = `http://www.nokeynoshade.party/api/seasons/${seasonNum}/queens`;
+  async chooseSeason(seasonNum) {
+    let queens = `http://www.nokeynoshade.party/api/seasons/${seasonNum}/queens`;
 
-  //   await axios
-  //     .get(queens)
-  //     .then((queenData) => {
-  //       // debugger;
-  //       console.log(queenData.data);
-  //       return this.setState({ queens: queenData.data });
-  //     })
-  //     .catch((err) => console.error(err));
-  // }
+    await axios
+      .get(queens)
+      .then((queenData) => {
+        // debugger;
+        console.log(queenData.data);
+        return this.setState({ queens: queenData.data });
+      })
+      .catch((err) => console.error(err));
+  }
 
   render() {
     const { season, queens } = this.state;
@@ -63,10 +64,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <Nav season={season} />
+          <Nav season={season} handleThemClicks={this.handleThemClicks}/>
         </header>
         <div>
-          <Queens queens={queens} />
+          <Queens queens={queens}/>
         </div>
       </div>
     );
