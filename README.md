@@ -8,7 +8,7 @@ React
 Webpack
 Html
 Javascript
-Styling - CSS, SASS, Bootstrap
+Styling - CSS, SCSS, Sass, Bootstrap
 No Key No Shade: A RuPaul's Drag Race API
 
     "@babel/core": "^7.14.2",
